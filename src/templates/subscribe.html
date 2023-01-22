@@ -1,0 +1,93 @@
+---
+title: Subscribe to my channel
+bodyClass: bg-slate-50
+youtube: https://www.youtube.com/@codingwithdidem
+linksdev: https://links.dev/codingwithdidem
+image: https://codingwithdidem.github.io/maizzle-images/blur.png
+---
+
+<extends src="src/layouts/main.html">
+  <block name="template">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center">
+          <table class="w-150 sm:w-full">
+            <tr>
+              <td class="p-16 sm:py-8 sm:px-6 text-center">
+                <a href="{{page.youtube}}" target="_blank">
+                  <img
+                    src="https://codingwithdidem.github.io/maizzle-images/logo.png"
+                    alt="Subscribe to my channel"
+                    width="250"
+                    class="max-w-full align-middle [border-0]"
+                  />
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" clas="sm:px-6">
+                <table
+                  class="w-full bg-top bg-no-repeat rounded text-left shadow hover:shadow-lg"
+                  style="background-image: url('{{{page.image}}}')"
+                >
+                  <tr>
+                    <td class="p-12 sm:px-6 text-brand-grey">
+                      <p
+                        class="m-0 mb-6 text-3xl uppercase font-semibold leading-6"
+                      >
+                        Stay Tuned
+                      </p>
+                      <p class="m-0 mb-4">
+                        Subscribe to my channel to get notified when I publish a
+                        new video.
+                      </p>
+                      <p class="m-0">
+                        I will be uploading videos about web development,
+                        design, and more.
+                      </p>
+
+                      <div class="mt-8">
+                        <component
+                          src="src/components/button.html"
+                          to="{{{ page.youtube }}}"
+                          class="block bg-pink-500"
+                        >
+                          Subscribe
+                        </component>
+                      </div>
+
+                      <table class="w-full" role="separator">
+                        <tr>
+                          <td class="py-8">
+                            <div
+                              class="bg-slate-200 opacity-30 h-px leading-px"
+                            >
+                              &zwj;
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <p class="m-0 mb-6 leading-relaxed">
+                        You can also follow me on social media.
+                      </p>
+
+                      <component
+                        src="src/components/button.html"
+                        to="{{{ page.linksdev }}}"
+                        class="block"
+                      >
+                        Links.dev
+                      </component>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </block>
+</extends>
